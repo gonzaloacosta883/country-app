@@ -2,8 +2,10 @@
     (valueInputSearch)="recibirOnSerchEmitter($event)" 
     placeholder="Buscar por capital"
 />
-@if (isError()) {
-    <h3>{{ isError() }}</h3>
-}@else {
-    <country-list [countries]="countries()" />
-}
+
+<country-list 
+    [countries]="countries()" 
+    [isLoading]="isLoading()"
+    [errorMessage]="isError()"
+    [isEmpty]="countries.length === 0"
+/>
