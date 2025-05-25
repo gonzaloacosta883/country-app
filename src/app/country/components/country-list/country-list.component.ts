@@ -12,7 +12,7 @@ export class CountryListComponent {
 
   public countries = input.required<Country[]>();
 
-  errorMessage = input<string|undefined|null>();
+  errorMessage = input<string|undefined|null|unknown>();
   isLoading = input<boolean>(false);
   isEmpty = input<boolean>(false);
 
